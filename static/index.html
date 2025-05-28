@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat with Pamidi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Chat with Pamidi</h1>
+            <p>Upload your textbook (PDF, DOCX, TXT) and ask questions.</p>
+        </header>
+
+        <section id="fileUploadSection">
+            <h2>Upload Textbook</h2>
+            <input type="file" id="fileUpload" accept=".pdf,.docx,.txt">
+            <button id="uploadButton">Upload & Process</button> 
+            <div id="uploadStatus"></div>
+        </section>
+
+        <section id="chatInterface">
+            <h2>Chat</h2>
+            <div id="chatbox">
+                <!-- Example Assistant Message Structure (template for JS) -->
+                <!--
+                <div class="message assistant-message">
+                    <div class="message-content">
+                        <p>Response text here...</p>
+                        <button class="play-audio-btn">Hear Response</button>
+                        <audio class="message-audio" style="display:none;"></audio>
+                    </div>
+                    <div class="message-meta">
+                        <span>Assistant</span> | <span>Time: X.XXs</span>
+                    </div>
+                    <div class="contexts" style="display:none;">
+                        <h4>Contexts Used:</h4>
+                        <!-- Context snippets will be added here by JS -->
+                    </div>
+                </div>
+                -->
+                <!-- Example User Message Structure (template for JS) -->
+                <!--
+                <div class="message user-message">
+                    <div class="message-content">
+                        <p>User query here...</p>
+                    </div>
+                    <div class="message-meta">
+                        <span>User</span>
+                    </div>
+                </div>
+                -->
+            </div>
+        </section>
+        
+        <section id="controlsSection">
+            <input type="checkbox" id="showContextsToggle">
+            <label for="showContextsToggle">Show Contexts for Assistant Messages</label>
+        </section>
+
+        <section id="chatInputSection">
+            <textarea id="chatInput" placeholder="Type your question here..." rows="3"></textarea>
+            <button id="sendButton">Send</button>
+        </section>
+
+        <div id="loadingIndicator" style="display:none;">Processing...</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

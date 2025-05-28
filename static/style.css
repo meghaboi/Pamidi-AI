@@ -1,0 +1,285 @@
+/* General Body & Typography */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: #f4f4f8;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Section */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    color: #333;
+    margin-bottom: 5px;
+}
+
+header p {
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* Section Styling */
+section {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #fdfdfd;
+}
+
+section h2 {
+    margin-top: 0;
+    color: #444;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+/* File Upload Section */
+#fileUploadSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#fileUpload {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: calc(100% - 16px); /* Full width minus padding */
+    box-sizing: border-box;
+}
+
+#uploadButton {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#uploadButton:hover {
+    background-color: #0056b3;
+}
+
+#uploadStatus {
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+/* Success/Error will be handled by JS by adding classes */
+.status-success {
+    color: green;
+}
+.status-error {
+    color: red;
+}
+
+
+/* Chat Interface (#chatbox) */
+#chatInterface h2 {
+    margin-bottom: 10px;
+}
+
+#chatbox {
+    height: 400px; /* Or 50vh for viewport height relative */
+    overflow-y: auto;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    margin-bottom: 15px;
+}
+
+/* Messages (.message) */
+.message {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 7px;
+    max-width: 80%;
+    word-wrap: break-word; /* Ensure long words don't overflow */
+}
+
+.message-content p {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+/* User Messages (.user-message) */
+.user-message {
+    background-color: #dcf8c6;
+    margin-left: auto; /* Align to right */
+    text-align: left; /* Text inside message still left-aligned */
+}
+
+/* Assistant Messages (.assistant-message) */
+.assistant-message {
+    background-color: #f1f0f0;
+    margin-right: auto; /* Align to left */
+}
+
+/* Message Meta */
+.message-meta {
+    font-size: 0.75em;
+    color: #777;
+    margin-top: 5px;
+}
+
+.user-message .message-meta {
+    text-align: right;
+}
+
+.assistant-message .message-meta {
+    text-align: left;
+}
+
+/* Play Audio Button */
+.play-audio-btn {
+    padding: 5px 10px;
+    font-size: 0.8em;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.play-audio-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Contexts */
+.contexts {
+    /* display: none; JS will toggle this */
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px dashed #ccc;
+    font-size: 0.8em;
+    background-color: #f9f9f9; /* Slightly different from message if needed */
+    border-radius: 4px;
+    padding: 8px;
+}
+
+.contexts h4 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.context-snippet {
+    background-color: #fff;
+    border: 1px solid #eee;
+    padding: 5px;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    white-space: pre-wrap; /* Preserve whitespace and wrap */
+    font-family: monospace; /* Good for snippets */
+    font-size: 0.9em;
+}
+
+/* Controls Section (#showContextsToggle) */
+#controlsSection {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 0.9em;
+}
+
+#showContextsToggle {
+    margin-right: 8px;
+}
+
+/* Chat Input Section */
+#chatInputSection {
+    display: flex;
+    align-items: flex-start; /* Align items to the start for textarea height */
+}
+
+#chatInput {
+    flex-grow: 1; /* Take remaining space */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    resize: vertical; /* Allow vertical resize only */
+    min-height: 40px; /* Minimum height */
+    margin-right: 10px;
+    box-sizing: border-box;
+}
+
+#sendButton {
+    padding: 10px 20px;
+    background-color: #28a745; /* Green for send */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    height: auto; /* Adjust height based on padding */
+}
+
+#sendButton:hover {
+    background-color: #1e7e34;
+}
+
+#sendButton:active {
+    background-color: #155724;
+}
+
+/* Loading Indicator */
+#loadingIndicator {
+    /* display: none; JS will toggle this */
+    text-align: center;
+    padding: 10px;
+    font-size: 1.1em;
+    color: #007bff;
+}
+
+/* Basic Responsiveness */
+@media (max-width: 600px) {
+    .container {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    #chatbox {
+        height: 300px; /* Adjust height for smaller screens */
+    }
+
+    .message {
+        max-width: 95%; /* Allow messages to take more width */
+    }
+
+    #chatInputSection {
+        flex-direction: column;
+    }
+
+    #chatInput {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    #sendButton {
+        width: 100%;
+    }
+}
